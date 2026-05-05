@@ -30,7 +30,7 @@ added no measurable benefit for this document type.
 
 **1. Clone the repo**
 ```bash
-git clone https://github.com/yourhandle/rag-pipeline
+git clone https://github.com/build-rk-ai/rag-pipeline
 cd rag-pipeline
 ```
 
@@ -41,8 +41,22 @@ pip install -r requirements.txt
 
 **3. Set up environment variables**
 ```bash
-cp .env.example .env
-# add your API keys to .env
+Set up API keys
+Add your keys to ~/.zprofile so they're available in every terminal session:
+
+mac: 
+export OPENAI_API_KEY=your-key-here
+export PINECONE_API_KEY=your-key-here
+export COHERE_API_KEY=your-key-here
+
+windows:
+[System.Environment]::SetEnvironmentVariable("OPENAI_API_KEY", "your-key-here", "User")
+[System.Environment]::SetEnvironmentVariable("PINECONE_API_KEY", "your-key-here", "User")
+[System.Environment]::SetEnvironmentVariable("COHERE_API_KEY", "your-key-here", "User")
+or 
+via GUI: Search "Environment Variables" in the Start menu → "Edit the system environment variables" → "Environment Variables" → add under "User variables".
+
+
 ```
 
 **4. Download the PDF**
