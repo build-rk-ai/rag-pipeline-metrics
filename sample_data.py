@@ -1,0 +1,46 @@
+eval_questions = [
+    "What are the key phases in the generative AI data lifecycle?", 
+    "Why is data quality critical in generative AI?", 
+    "What does data preparation for pre-training typically involve?", 
+    "What is one text preparation step mentioned for LLM training data?", 
+    "Why is data normalization or formatting important before model ingestion?", 
+    "How large can training corpora for major foundation models be?", 
+    "What is the main purpose of retrieval augmented generation in enterprise AI?", 
+    "When is fine-tuning most appropriate?", 
+    "What are the two distinct forms of fine-tuning described?", 
+    "What does unsupervised domain fine-tuning do?", 
+    "What does supervised task fine-tuning focus on?", 
+    "How do fine-tuning datasets differ from pre-training datasets?", 
+    "What is an alternative to fine-tuning for model adaptation?", 
+    "Why is model distillation useful?", 
+    "What kind of data does model distillation often rely on?", 
+    "What is the role of evaluation datasets in generative AI?", 
+    "What should organizations consider when building evaluation datasets?", 
+    "Why are manually curated golden datasets valuable?", 
+    "What are user-generated data sources in a generative AI feedback loop?", 
+    "What is the purpose of continuous monitoring in the generative AI lifecycle?"
+]
+
+ground_truths = [
+    "Data preparation, integration into model workflows such as retrieval or fine-tuning, feedback collection, and ongoing updates.", 
+    "Because garbage in, garbage out applies; poor inputs lead to poor outputs, so cleaning, filtering, and preprocessing are essential.", 
+    "Aggregating raw data, removing noise, errors, and biases, and formatting it for model ingestion.", 
+    "Eliminating duplicates, purging sensitive personal information, and filtering out toxic or irrelevant content.", 
+    "It helps transform raw content into a structure suitable for the model, such as tokenizing text or removing HTML tags.", 
+    "Models such as Anthropic Claude are trained on hundreds of billions of tokens from sources like Wikipedia and other public and licensed data.", 
+    "To customize pre-trained models through lightweight access to relevant knowledge without full model retraining.", 
+    "When the use case is highly specialized or large-scale enough to justify the technical capability, data curation, and governance effort.", 
+    "Unsupervised domain fine-tuning and supervised task fine-tuning.", 
+    "It further trains a model on domain-specific text so it better understands the language, terminology, and context of a field.", 
+    "Teaching the model a specific function or output format using a labeled dataset of inputs and desired outputs.", 
+    "They are typically much smaller, but they must be carefully selected and curated for the target task.", 
+    "Model distillation, which trains a smaller model to replicate the behavior of a larger model.", 
+    "It reduces resource requirements while retaining task-specific performance.", 
+    "Synthetic or teacher-generated datasets produced by the larger model.", 
+    "They act as benchmarks for assessing model performance and producing ground truth for robust evaluation.", 
+    "Data quality, representativeness, ethical considerations, and alignment with business objectives.", 
+    "They provide high-quality ground truth data for model evaluation, though they are time-consuming and resource-intensive to compile.", 
+    "User questions and prompts, model responses, and explicit feedback such as ratings.", 
+    "To detect drift, learn from live usage, and feed improvements back into monitoring and update processes."
+]
+

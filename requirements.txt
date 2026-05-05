@@ -1,0 +1,10 @@
+openai
+pinecone
+pymupdf
+cohere
+langchain-text-splitters
+rank-bm25
+datasets
+ragas
+tqdm
+python-dotenv
