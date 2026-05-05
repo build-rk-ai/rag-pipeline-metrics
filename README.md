@@ -83,18 +83,3 @@ print(generate_answer(query, texts))
 ```bash
 python evaluate_retrieval.py
 ```
-
-## Project structure
-rag-pipeline-metrics/
-├── README.md
-├── requirements.txt
-├── blog.md
-├── .env.example
-├── .gitignore
-├── data/
-│   └── lifecycle_genai.pdf
-├── indexing.py
-├── retrieval.py
-├── reranker.py
-├── evaluate_retrieval.py
-└── sample_data.py
