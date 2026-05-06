@@ -106,13 +106,13 @@ def run_evaluation(use_rerank=False, use_hyde=False, use_hybrid=False):
 
 if __name__ == "__main__":
     print("Baseline:")
-    run_evaluation()
+    # run_evaluation()
 
     print("With Reranker:")
     run_evaluation(use_rerank=True)
 
-    print("With HyDE:")
-    run_evaluation(use_rerank=True, use_hyde=True)
+    # print("With HyDE:")
+    # run_evaluation(use_rerank=True, use_hyde=True)
 
-    print("With Hybrid:")
-    run_evaluation(use_rerank=True, use_hybrid=True)
+    # print("With Hybrid:")
+    # run_evaluation(use_rerank=True, use_hybrid=True)

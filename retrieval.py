@@ -52,8 +52,29 @@ def hyde_query(query):
 def generate_answer(query, context, model = 'gpt-4o'):
     context_str = "\n\n---\n\n".join(context)
 
-    prompt = f"""Answer the question using only the context below. If the question cannot be answered from the context above, say:
-"I don't know; this information is not in the provided context."
+#  old prompt Faithfulness: 0.971
+#     prompt = f"""Answer the question using only the context below. If the question cannot be answered from the context above, say:
+# "I don't know; this information is not in the provided context."
+
+#                 Context:
+#                 {context_str}
+
+#                 Question:
+#                 {query}
+
+#                 Answer:
+#                 """
+
+    prompt = f"""Answer the question using only the context below.
+
+                Rules:
+                - Every key statement must be supported by the context
+                - If possible, implicitly base your answer on multiple context parts
+                - Do not introduce external knowledge
+                - Be concise and precise
+
+                If the context is insufficient, respond:
+                "Not found in context."
 
                 Context:
                 {context_str}
@@ -61,8 +82,7 @@ def generate_answer(query, context, model = 'gpt-4o'):
                 Question:
                 {query}
 
-                Answer:
-                """
+            Answer:"""
     
     llm = get_llm()
     response = llm.chat.completions.create(
