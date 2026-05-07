@@ -13,8 +13,11 @@ measure what actually improves it.
 - Cohere rerank-english-v3.0 for reranking
 - BM25 hybrid search
 - Evaluation framework tracking Precision@1, Recall@5, MRR@10, NDCG@5
+- RAGAS evaluation for generation quality (Faithfulness, Answer Relevancy, Context Precision, Context Recall)
 
 ## Results
+
+## Part-1: Retrieval Evaluation
 
 | Approach        | Precision@1 | Recall@5 | MRR@10 |
 |-----------------|-------------|----------|--------|
@@ -25,6 +28,16 @@ measure what actually improves it.
 
 Reranker was the only change that moved the numbers. HyDE and hybrid search 
 added no measurable benefit for this document type.
+
+## Part-2: Generation Evaluation (RAGAS)
+
+| Metric             | Score       |
+|--------------------|-------------| 
+| Context Precision  | 0.900       | 
+| Context Recall     | 1.000       |                 
+| Faithfulness       | 0.900       | 
+| Answer Relevancy   | 1.000       | 
+
 
 ## Setup
 
