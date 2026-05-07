@@ -96,3 +96,8 @@ print(generate_answer(query, texts))
 ```bash
 python evaluate_retrieval.py
 ```
+
+**8. Run RAGAS evaluation**
+```bash
+python evaluate_ragas.py
+```
